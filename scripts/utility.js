@@ -5,9 +5,24 @@ function showSection(id) {
     document.getElementById(id).classList.remove('hidden');
 };
 
+// button active bg-color
 function showActive(id) {
     document.getElementById('btn-donation').classList.remove('bg-[#B4F461]')
     document.getElementById('btn-history').classList.remove('bg-[#B4F461]')
 
     document.getElementById(id).classList.add('bg-[#B4F461]')
+};
+
+// getting input value
+function getInputValue(id) {
+    const inputValue = document.getElementById(id).value;
+    const donateValue = parseFloat(inputValue);
+    return donateValue;
+}
+
+// getting current amount
+function getInnerText(id) {
+    const balance = document.getElementById(id).innerText;
+    const haveBalance = parseFloat(balance);
+    return haveBalance;
 }
