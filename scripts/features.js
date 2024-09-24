@@ -15,6 +15,16 @@ document.getElementById('btn-noakhali').addEventListener('click', function (even
     const currentBalance = getInnerText('current-amount');
     const currentDonation = getInnerText('noakhali-amount');
 
+    if (isNaN(inputValue)) {
+        alert('Failed');
+        return;
+    }
+
+    if (inputValue > currentBalance || inputValue < 0) {
+        alert('Failed');
+        return;
+    }
+
     const newCurrentBalance = currentBalance - inputValue;
     const newCurrentDonation = currentDonation + inputValue;
 
@@ -30,6 +40,7 @@ document.getElementById('btn-noakhali').addEventListener('click', function (even
     `
 
     document.getElementById('transaction-container').appendChild(div);
+
 });
 
 // Calculate Feni Donation
@@ -39,21 +50,31 @@ document.getElementById('btn-feni').addEventListener('click', function (event) {
     const currentBalance = getInnerText('current-amount');
     const currentDonation = getInnerText('feni-amount');
 
+    if (isNaN(inputValue)) {
+        alert('Failed');
+        return;
+    }
+
+    if (inputValue > currentBalance || inputValue < 0) {
+        alert('Failed');
+        return;
+    }
+
     const newCurrentBalance = currentBalance - inputValue;
     const newCurrentDonation = currentDonation + inputValue;
 
     document.getElementById('current-amount').innerText = newCurrentBalance;
     document.getElementById('feni-amount').innerText = newCurrentDonation;
 
-     // add transaction history
-     const title = document.getElementById('title-feni').innerText;
-     const div = document.createElement('div');
-     div.classList.add('shadow-xl', 'p-6', 'rounded-2xl', 'border', 'mb-5');
-     div.innerHTML = `
+    // add transaction history
+    const title = document.getElementById('title-feni').innerText;
+    const div = document.createElement('div');
+    div.classList.add('shadow-xl', 'p-6', 'rounded-2xl', 'border', 'mb-5');
+    div.innerHTML = `
          <p class="font-bold"> ${inputValue} Taka is ${title} </p>
      `
- 
-     document.getElementById('transaction-container').appendChild(div);
+
+    document.getElementById('transaction-container').appendChild(div);
 });
 
 // Calculate Quota Donation
@@ -63,20 +84,33 @@ document.getElementById('btn-quota').addEventListener('click', function (event) 
     const currentBalance = getInnerText('current-amount');
     const currentDonation = getInnerText('quota-amount');
 
+    if (isNaN(inputValue)) {
+        alert('Failed');
+        return;
+    }
+
+    if (inputValue > currentBalance || inputValue < 0) {
+        alert('Failed');
+        return;
+    }
     const newCurrentBalance = currentBalance - inputValue;
     const newCurrentDonation = currentDonation + inputValue;
 
     document.getElementById('current-amount').innerText = newCurrentBalance;
     document.getElementById('quota-amount').innerText = newCurrentDonation;
 
-     // add transaction history
-     const title = document.getElementById('title-quota').innerText;
-     const div = document.createElement('div');
-     div.classList.add('shadow-xl', 'p-6', 'rounded-2xl', 'border', 'mb-5');
-     div.innerHTML = `
+    // add transaction history
+    const title = document.getElementById('title-quota').innerText;
+    const div = document.createElement('div');
+    div.classList.add('shadow-xl', 'p-6', 'rounded-2xl', 'border', 'mb-5');
+    div.innerHTML = `
          <p class="font-bold"> ${inputValue} Taka is Donated For ${title} </p>
      `
- 
-     document.getElementById('transaction-container').appendChild(div);
+
+    document.getElementById('transaction-container').appendChild(div);
 });
 
+
+document.getElementById('btn-blog').addEventListener('click', function () {
+    window.location.href = '/blog.html';
+})
