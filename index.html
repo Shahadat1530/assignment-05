@@ -42,15 +42,17 @@
 
         <!-- buttons -->
         <section class="flex justify-center space-x-3">
-            <button class="btn bg-[#B4F461]">Donate</button>
-            <button class="btn bg-[#B4F461]">History</button>
+            <button id="btn-donation" class="btn bg-[#B4F461]">Donation</button>
+            <button id="btn-history" class="btn bg-[#B4F461]">History</button>
         </section>
     </header>
 
     <main>
         <section class="max-w-screen-2xl mx-auto my-16 space-y-6">
-            <!-- card 1 -->
-            <div class="p-12 rounded-2xl border shadow-xl">
+            <!-- donation part -->
+           <div id="donation-section">
+             <!-- card 1 -->
+             <div class="p-12 rounded-2xl border shadow-xl">
                 <div class="flex ">
                     <img src="assets/feni.png" alt="">
                     <div class="ml-4 space-y-5">
@@ -111,11 +113,18 @@
                     </div>
                 </div>
             </div>
+           </div>
+
+           <!-- history part -->
+            <div id="history-section" class="hidden">
+                <h1 class="text-6xl">History</h1>
+            </div>
         </section>
     </main>
 
 
-
+    <script src="scripts/features.js"></script>
+    <script src="scripts/utility.js"></script>
 </body>
 
 </html>
