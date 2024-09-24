@@ -8,9 +8,113 @@
     <!-- Daisy-UI & Tailwind cdn -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <style>
+        .lexend-font {
+            font-family: "Lexend", sans-serif;
+        }
+    </style>
 </head>
 
-<body>
+<body class="lexend-font">
+
+    <header class="space-y-16">
+        <div class="bg-[#F9F7F3]">
+            <div class="max-w-screen-2xl mx-auto">
+                <nav class="flex justify-between ">
+                    <button class="btn bg-[#B4F461]">Blog</button>
+                    <div class="flex items-center space-x-2">
+                        <img width=30px src="assets/logo.png" />
+                        <p>DONATE BANGLADESH</p>
+                    </div>
+                    <div class="flex space-x-2 items-center">
+                        <img src="assets/coin.png" alt="coin-logo">
+                        <p>5000</p>
+                        <p>BDT</p>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <!-- buttons -->
+        <section class="flex justify-center space-x-3">
+            <button class="btn bg-[#B4F461]">Donate</button>
+            <button class="btn bg-[#B4F461]">History</button>
+        </section>
+    </header>
+
+    <main>
+        <section class="max-w-screen-2xl mx-auto my-16 space-y-6">
+            <!-- card 1 -->
+            <div class="p-12 rounded-2xl border shadow-xl">
+                <div class="flex ">
+                    <img src="assets/feni.png" alt="">
+                    <div class="ml-4 space-y-5">
+                        <div class="flex space-x-2 justify-center items-center bg-[#1111110D] w-36 rounded-md">
+                            <img src="assets/coin.png" alt="coin-logo">
+                            <p>5000</p>
+                            <p>BDT</p>
+                        </div>
+                        <h2 class="font-bold text-xl">Donate for Flood at Noakhali, Bangladesh</h2>
+                        <p class="font-light">  The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.
+                        </p>
+                        <input class="border w-full p-4" type="text" placeholder="Write Donation Amount">
+                        <div>
+                            <button class="btn bg-[#B4F461] w-full">Donate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="p-12 rounded-2xl border shadow-xl">
+                <div class="flex ">
+                    <img src="assets/feni.png" alt="">
+                    <div class="ml-4 space-y-5">
+                        <div class="flex space-x-2 justify-center items-center bg-[#1111110D] w-36 rounded-md">
+                            <img src="assets/coin.png" alt="coin-logo">
+                            <p>5000</p>
+                            <p>BDT</p>
+                        </div>
+                        <h2 class="font-bold text-xl">Donate for Flood Relief in Feni,Bangladesh</h2>
+                        <p class="font-light"> The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.
+                        </p>
+                        <input class="border w-full p-4" type="text" placeholder="Write Donation Amount">
+                        <div>
+                            <button class="btn bg-[#B4F461] w-full">Donate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="p-12 rounded-2xl border shadow-xl">
+                <div class="flex ">
+                    <img src="assets/quota-protest.png" alt="">
+                    <div class="ml-4 space-y-5">
+                        <div class="flex space-x-2 justify-center items-center bg-[#1111110D] w-36 rounded-md">
+                            <img src="assets/coin.png" alt="coin-logo">
+                            <p>5000</p>
+                            <p>BDT</p>
+                        </div>
+                        <h2 class="font-bold text-xl">Aid for Injured in the Quota Movement</h2>
+                        <p class="font-light"> The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.
+                        </p>
+                        <input class="border w-full p-4" type="text" placeholder="Write Donation Amount">
+                        <div>
+                            <button class="btn bg-[#B4F461] w-full">Donate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
 
 </body>
 
