@@ -110,7 +110,8 @@ document.getElementById('btn-quota').addEventListener('click', function (event) 
     document.getElementById('transaction-container').appendChild(div);
 });
 
-
+// blog html connection
 document.getElementById('btn-blog').addEventListener('click', function () {
     window.location.href = '/blog.html';
 })
+
